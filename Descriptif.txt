@@ -1,0 +1,32 @@
+Développement Web MVC Coté Client : Back end avec Spring et Fornt end avec Angular.
+
+Cette application montre comment créer une API Restful en se basant sur Spring IOC, Spring Data, JPA et Hibernate. 
+
+Elle décrit les tapes suivantes :
+- Créer un projet Spring Starter
+- Créer une entité JPA (Produit)
+- Créer une interface JPARepositoty basée sur Spring data
+- Tester la couche DAO
+- Créer L'API Restful pour gérer  Gérer les produits
+- Exposer les les méthodes de l'interface JPA Repository à une API Rest en utilisant Data Rest
+- Teser L'API Rest avec un client Rest (Advenced Rest Client)
+
+La deuxième partie montre comment créer une application Web basée sur HTML5, Angular JS et BootStrap.
+
+Cette partie présente comment développer la partie Front end d'une application Web Respectant MVC Coté Client en utilisant le Framework Java Script AngularJS, 
+HTML5 et BootStrap. 
+
+L'application  montre :
+
+- Comment intégrer Bootstrap et AngulatJS dans une page HTML.
+- Comment créer un module Angular
+- Comment Créer les controleurs de l'application
+- Comment gérer le modèle
+- Comment gérer les vues de l'applications.
+- Comment gérer le data Binding
+- Comment faire l'interaction avec une API Rest 
+- Comment gérer le routes en utilisant Angular-Ui-Router.
+- Etc....
+
+Je pense que c'est un démo très utile pour un débutant avec Angular JS et surtout pour celui qui a déjà suivi le développement Web MVC Server Side.
+Elle  aide à prendre facilement en main ce framework très util pour les applications Web modernes.

@@ -1,0 +1,11 @@
+body {
+	background: #e6e6e6;
+}
+
+.spacer{
+	padding: 20px;
+}
+
+.clickabe{
+	cursor: pointer;
+}
