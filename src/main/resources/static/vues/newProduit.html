@@ -6,7 +6,7 @@
 </head>
 <div class="container">
 	<h1 align="center" style="color: navy;">New produit</h1>
-	<div class="panel panel-success">
+	<div class="panel panel-success" ng-if="mode==0">
 		<div class="panel-heading">Nouveau Produit</div>
 		<div class="panel-body">
 			<form>
@@ -28,7 +28,7 @@
 			</form>
 		</div>
 	</div>
-	<div class="panel panel-info">
+	<div class="panel panel-info" ng-if="mode==1">
 		<div class="panel-heading">Confirmation Produit</div>
 		<div class="panel-body">
 			<div class="form-group">
