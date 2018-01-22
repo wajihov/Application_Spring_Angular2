@@ -46,7 +46,13 @@ app.controller("newProduitController", function($scope, $http) {
     }
   }
   $scope.modeForm = function() {
+    $scope.produit = {
+      designation: "",
+      prix: 0.0,
+      quantite: 0
+    };
     $scope.mode = 0;
+
   }
 /*$scope.saveProduit = function() {
   $http.post("http://localhost:8080/produits", $scope.produit)
