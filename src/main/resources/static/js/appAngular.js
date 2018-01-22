@@ -21,8 +21,9 @@ app.config(function($stateProvider, $urlRouterProvider) {
     url: 'newProduit',
     templateUrl: "vues/newProduit.html",
     controller: 'newProduitController'
-  })
+  });
 });
+
 
 app.controller("HomeController", function() {});
 
@@ -43,6 +44,9 @@ app.controller("newProduitController", function($scope, $http) {
       console.log("Failed : " + reason);
       alert("Failed : " + reason);
     }
+  }
+  $scope.modeForm = function() {
+    $scope.mode = 0;
   }
 /*$scope.saveProduit = function() {
   $http.post("http://localhost:8080/produits", $scope.produit)
