@@ -1,0 +1,34 @@
+<head>
+<meta charset="utf-8">
+</head>
+
+<div class="container spacer">
+	<div class="container spacer">
+		<strong> Mot rechercher :</strong> <input type="text"
+			ng-model="motCle">
+		<button class="btn btn-primary" ng-click="getProduit()">Chercher</button>
+	</div>
+	<div class="container spacer">
+		<table class="table table-striped">
+			<tr>
+				<th>ID</th>
+				<th>Désignation</th>
+				<th>Prix</th>
+				<th>Quantité</th>
+			</tr>
+			<tr ng-repeat="p in produitS.content">
+				<td>{{p.idProduit}}</td>
+				<td>{{p.designation}}</td>
+				<td>{{p.prix}}</td>
+				<td>{{p.quantite}}</td>
+			</tr>
+		</table>
+	</div>
+	<div class="container">
+		<ul class="nav nav-pills">
+			<li ng-class="{active:$index==pageCourante}"
+				ng-click="gotopages($index)" class="clickabe"
+				ng-repeat="p in pages track by $index"><a> {{$index}}</a></li>
+		</ul>
+	</div>
+</div>

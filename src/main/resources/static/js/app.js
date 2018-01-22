@@ -31,19 +31,23 @@ $http.get("http://localhost:8081/findProducts?mc=").success(function(data) {
 app.controller('HomeController', function() {})
 app.controller('newProduitController', function($scope, $http) {
 	$scope.produit = {};
-	$scope.mode = 0;
 	$scope.saveProduit = function() {
-		//alert("Dans nouveau Produit");
-		$http.post("http://localhost:8080/produits", $scope.produit)
-			.success(function(data) {
-				$scope.produit = data
-				$scope.mode = 1;
-			}).error(function(error) {
-			alert(error);
-			console.log(error);
+		$http({
+			method : "post",
+			url : "http://localhost:8080/produits",
+			data : $scope.produit
+		}).then(function(response) {
+			data = response.data;
+			$scope.produit = data;
+			alert("dans ajouter : " + data);
+		}),function(reason){
+			console.log("Failed : "+reason);
+			alert("Failed : "+reason);
+		}
+		}
 		});
-	}
-	$scope.modeForm = function() {
+	
+/*	$scope.modeForm = function() {
 		$scope.produit = {
 			designation : "",
 			prix : 0.0,
@@ -51,7 +55,7 @@ app.controller('newProduitController', function($scope, $http) {
 		};
 		$scope.mode = 0;
 	}
-});
+});*/
 app.controller("MyControllor", function($scope, $http) {
 	$scope.produitS = null;
 	$scope.motCle = "";
